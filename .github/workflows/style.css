@@ -1,0 +1,10 @@
+.banner {
+	display: flex;
+	align-items: center;     /* Align vertically in the middle */
+	gap: 15px;               /* Optional spacing between elements */
+}
+
+.banner h1 {
+	margin: 0;              /* Remove default extra spacing */
+	white-space: nowrap;    /* Prevent wrapping to next line */
+}
