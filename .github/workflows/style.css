@@ -1,10 +1,17 @@
 .banner {
-	display: flex;
-	align-items: center;     /* Align vertically in the middle */
-	gap: 15px;               /* Optional spacing between elements */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;   /* Prevent line breaks */
+}
+
+.banner img {
+    max-height: 150px;   /* Reduce image size */
+    height: auto;
 }
 
 .banner h1 {
-	margin: 0;              /* Remove default extra spacing */
-	white-space: nowrap;    /* Prevent wrapping to next line */
+    margin: 0;
+    white-space: nowrap;
+    font-size: 1.8rem;   /* Adjust size if desired */
 }
