@@ -1,181 +1,32 @@
-/* ---------- base ---------- */
-:root {
-    --brand: #090c9c;
-    --muted-bg: #f2f2f7;
-    --accent-100: #d9d9ff;
-    --white-60: rgba(255,255,255,0.6);
-}
-
-* { box-sizing: border-box; }
-html,body { height: 100%; }
-body {
-    margin: 0;
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--muted-bg);
-    color: #111;
-    -webkit-font-smoothing:antialiased;
-}
-
-/* ---------- header ---------- */
 .header {
-    background-color: var(--brand);
-    color: white;
+    background-color: #090c9c;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
-    gap: 10px;
+    padding: 10px 20px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .header .left {
     display: flex;
     align-items: center;
-    gap: 14px;
-    min-width: 0;
+    gap: 15px;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .header img {
     display: block;
-    border-radius: 8px;
-    object-fit: cover;
 }
 
-.header h1 {
-    font-size: 1.25rem;
-    margin: 0;
-    line-height: 1.05;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* ---------- nav / dropdown ---------- */
-.navbar { position: relative; }
-
-.menu-btn {
-    background: #ffffff;
-    color: var(--brand);
-    border: none;
-    padding: 8px 12px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.menu-btn:focus { outline: 3px solid #ffffff22; outline-offset: 2px; }
-
-.dropdown {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: white;
-    list-style: none;
-    padding: 6px 0;
-    margin: 8px 0 0 0;
-    border-radius: 8px;
-    width: 180px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-    z-index: 30;
-}
-
-.dropdown.show { display: block; }
-
-.dropdown li a {
-    display: block;
-    padding: 10px 12px;
-    text-decoration: none;
-    color: var(--brand);
-    font-weight: 700;
-}
-
-.dropdown li a:hover {
-    background: var(--accent-100);
-}
-
-/* ---------- right icons ---------- */
-.right { display: flex; gap: 12px; align-items: center; }
-
-.right img { border-radius: 6px; }
-
-/* ---------- header line ---------- */
 .header-hr {
     width: 100%;
+    margin: 0;
     border: none;
-    border-top: 2px solid var(--white-60);
-    margin-top: 10px;
-}
-
-/* ---------- main content ---------- */
-.content {
-    padding: 30px 20px;
-    max-width: 980px;
-    margin: 24px auto;
-    text-align: center;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(10,10,30,0.04);
-}
-
-.content h2 { margin-top: 0; color: var(--brand); }
-.content p { color: #333; line-height: 1.55; }
-
-/* buttons & quick links */
-.quick-links {
-    margin-top: 18px;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn {
-    background: var(--brand);
-    color: white;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 700;
-    box-shadow: 0 6px 18px rgba(9,12,156,0.12);
-}
-
-.btn.ghost {
-    background: transparent;
-    border: 2px solid var(--brand);
-    color: var(--brand);
-}
-
-/* small helper */
-.small { font-size: 0.9rem; color: #555; margin-top: 10px; }
-
-/* ---------- iframe wrapper (handbook) ---------- */
-.iframe-wrap {
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-}
-
-.iframe-wrap iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 1200px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(10,10,30,0.08);
-}
-
-/* ---------- responsive ---------- */
-@media (max-width: 880px) {
-    .header h1 { font-size: 1rem; }
-    .menu-btn { padding: 8px 10px; }
-    .dropdown { right: 6px; width: 160px; }
-    .iframe-wrap iframe { height: 1000px; }
-}
-
-@media (max-width: 560px) {
-    .right img { height: 44px; }
-    .header { padding: 12px; }
-    .iframe-wrap iframe { height: 900px; }
-    .content { padding: 18px; margin: 14px; }
+    border-top: 2px solid #000;
 }
