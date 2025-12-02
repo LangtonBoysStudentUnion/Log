@@ -39,7 +39,8 @@ body {
 .nav-link { color: rgba(255,255,255,0.95); text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight:600; }
 .nav-link:hover { background: rgba(255,255,255,0.08); }
 .nav-link.cta { background: var(--accent); color: var(--blue-900); }
-.social img { width: 36px; height: 36px; display:block; }
+.social { display: flex; align-items: center; }
+.social img { width: 36px; height: 36px; display: block; object-fit: contain; }
 
 .header-hr { width: 100%; margin: 12px 0 0 0; border: none; height: 6px; background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.04)); }
 
