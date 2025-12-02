@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Union Handbook</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="Student Union Logo Ideas.png" type="image/png" />
+	<title>Student Union Handbook — Langton SU</title>
 </head>
 <body>
-    <iframe height=1800px width=600px src="https://docs.google.com/document/d/e/2PACX-1vQtjhKtbNd3sE_ohN-qLBv2aXYrNAaPt05FZAmmA_WDvU8z8LNDckcoYWYpQDFwPgKHZXt82rn4fXDU/pub?embedded=true"></iframe>
+	<header class="header">
+		<div class="left">
+			<img src="Student Union Logo Ideas.png" alt="Langton logo" height="90" width="90" />
+			<h1>Student Union Handbook</h1>
+		</div>
+
+		<nav class="navbar">
+			<button class="menu-btn" aria-expanded="false">Menu ▾</button>
+			<ul class="dropdown" role="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="handbook.html">Handbook</a></li>
+				<li><a href="https://www.instagram.com/student_union_langton?igsh=eTd3czVrd3AyeDJ6" target="_blank" rel="noopener">Instagram</a></li>
+				<li><a href="https://www.tiktok.com/@slbssu" target="_blank" rel="noopener">TikTok</a></li>
+			</ul>
+		</nav>
+
+		<div class="right">
+			<a href="https://www.instagram.com/student_union_langton?igsh=eTd3czVrd3AyeDJ6" target="_blank" rel="noopener">
+				<img src="instagram-logo-icon-transparent-background-free-png.png" alt="Instagram" height="60" />
+			</a>
+			<a href="https://www.tiktok.com/@slbssu" target="_blank" rel="noopener">
+				<img src="TikTok-Icon-White-Dark-Background-Logo.wine.png" alt="TikTok" height="55" />
+			</a>
+		</div>
+
+		<hr class="header-hr" />
+	</header>
+
+	<main>
+		<section class="content">
+			<h2>Student Union Handbook</h2>
+			<p>If the document doesn't render here, click "Open in new tab".</p>
+
+			<!-- embedded google doc -->
+			<div class="iframe-wrap">
+				<iframe
+					src="https://docs.google.com/document/d/e/2PACX-1vQtjhKtbNd3sE_ohN-qLBv2aXYrNAaPt05FZAmmA_WDvU8z8LNDckcoYWYpQDFwPgKHZXt82rn4fXDU/pub?embedded=true"
+					loading="lazy"
+					title="Student Union Handbook (embedded)"
+				></iframe>
+			</div>
+
+			<p class="small">If embedding is blocked by a network, <a href="https://docs.google.com/document/d/e/2PACX-1vQtjhKtbNd3sE_ohN-qLBv2aXYrNAaPt05FZAmmA_WDvU8z8LNDckcoYWYpQDFwPgKHZXt82rn4fXDU/pub" target="_blank" rel="noopener">open the handbook in a new tab</a>.</p>
+		</section>
+	</main>
+
+	<script>
+		const menuBtn = document.querySelector(".menu-btn");
+		const dropdown = document.querySelector(".dropdown");
+
+		menuBtn.addEventListener("click", () => {
+			const isShown = dropdown.classList.toggle("show");
+			menuBtn.setAttribute("aria-expanded", isShown ? "true" : "false");
+		});
+
+		window.addEventListener("click", (e) => {
+			if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+				dropdown.classList.remove("show");
+				menuBtn.setAttribute("aria-expanded", "false");
+			}
+		});
+	</script>
 </body>
 </html>
