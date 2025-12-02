@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="Student Union Logo Ideas.png" type="image/png">
     <meta name="theme-color" content="#07107a">
@@ -40,7 +40,9 @@
                 <p class="hero-sub">Student-led events, clubs and support — join us to make school life better.</p>
                 <p class="hero-actions">
                     <a class="btn btn-primary" href="Handbook.html">Open the Handbook</a>
-                    <a class="btn btn-outline" href="#contact">Contact Us</a>
+
+                    <!-- FIXED BUTTON -->
+                    <a class="btn btn-outline" href="#" id="copyEmail">Contact Us</a>
                 </p>
             </div>
         </section>
@@ -50,5 +52,18 @@
             <p>Find meeting minutes, event sign-ups, and our constitution in the handbook.</p>
         </section>
     </main>
+
+    <!-- COPY TO CLIPBOARD SCRIPT -->
+    <script>
+        document.getElementById("copyEmail").addEventListener("click", function(e) {
+            e.preventDefault(); 
+            const email = "studentunion@thelangton.org.uk";
+
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard:\n" + email);
+            });
+        });
+    </script>
+
 </body>
 </html>
