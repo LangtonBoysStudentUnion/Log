@@ -4,6 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .header .left {
@@ -20,4 +22,11 @@
 
 .header img {
     display: block;
+}
+
+.header-hr {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-top: 2px solid #000;
 }
