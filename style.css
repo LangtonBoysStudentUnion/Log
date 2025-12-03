@@ -77,3 +77,13 @@ body {
     .right { width: 100%; justify-content: flex-end; margin-top: 8px; }
     .hero { padding: 40px 0; }
 }
+
+.info-paragraph {
+    max-width: 800px;        /* keeps text narrow like the intro section */
+    margin: 0 auto 20px auto;
+    text-align: left;
+    font-size: 0.95rem;      /* slightly smaller text */
+    color: var(--muted);     /* same soft grey tone as the intro line */
+    line-height: 1.55;
+    padding-left: 10px;      /* small left-indent */
+}
